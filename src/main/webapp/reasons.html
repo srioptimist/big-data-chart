@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="analyticsApp">
+<head>
+ <script src="angular.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<style>
+table, th, td {
+    border: 1px solid green;
+}
+.reasons {
+	width:800px; 
+	margin:0 auto;
+	padding-top: 100px;
+}
+
+.back {
+	width:800px; 
+	margin:0 auto;
+	padding-top: 20px;
+}
+
+</style>
+</head>
+<body ng-controller="analyticsCtrl as analyticsC">
+
+<div class="reasons">
+ <div style="float: left; width: 100px;"><img src="cts.jpg" height="100" width="100"></div>
+ <div id="chart-container" style="float: left; width: 600px;">
+ 	 <table>
+		  <tr>
+		    <th>S.no</th>
+		    <th>Comments</th>
+		  </tr>
+		  <tr ng-repeat="reason in reasons">
+		  	<td>{{$index+1}}</td>
+		    <td>{{reason}}</td>
+		  </tr>
+		</table>
+ </div>
+ <div style="float: left; width: 100px;"><img src="cts.jpg" height="100" width="100"></div>
+ <br style="clear: left;" />
+</div>
+ 
+ <!--  <div class="reasons">
+         <table>
+		  <tr>
+		    <th>S.no</th>
+		    <th>Comments</th>
+		  </tr>
+		  <tr ng-repeat="reason in reasons">
+		  	<td>{{$index+1}}</td>
+		    <td>{{reason}}</td>
+		  </tr>
+		</table>
+    </div>  -->
+    
+   <div class ="back">
+ 	<a href="index.html"><button>Back</button></a>
+ </div>
+
+
+</body>
+</html>
